@@ -33,7 +33,7 @@ Installation
 Usage
 =====
 
-Add *muffin-ElasticSearch* to muffin plugin list:
+Add *muffin-elasticsearch* to muffin plugin list:
 
 .. code-block:: python
 
@@ -63,6 +63,16 @@ And use *ElasticSearch* plugin:
                 id=42
             )
             return ret
+
+
+.. _options:
+
+Options
+-------
+
+========================== ==============================================================
+ *ELASTICSEARCH_ENDPOINTS* List of ElasticSearch servers (``['localhost:9200']``)
+========================== ==============================================================
 
 .. _bugtracker:
 
