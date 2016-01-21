@@ -27,7 +27,7 @@ Installation
 
 **Muffin-ElasticSearch** should be installed using pip: ::
 
-    pip install git+https://github.com/drgarcia1986/muffin-elasticsearch.git
+    pip install muffin-elasticsearch
 
 .. _usage:
 
