@@ -16,7 +16,7 @@ class Plugin(BasePlugin):
 
     name = 'elasticsearch'
     defaults = {
-        'endpoins': ['localhost:9200'],
+        'endpoints': ['localhost:9200'],
     }
 
     def __init__(self, *args, **kwargs):
@@ -27,13 +27,13 @@ class Plugin(BasePlugin):
     def setup(self, app):
         """ Setup self. """
         super().setup(app)
-        if not isinstace(list, self.cfg):
+        if not isinstance(list, self.cfg.endpoints):
             raise TypeError('Invalid endpoints configuration format')
 
     @asyncio.coroutine
     def start(self, app):
         """ Connect to ElasticSearch. """
-        self.conn = Elasticsearch(self.cfg.endpoins)
+        self.conn = Elasticsearch(self.cfg.endpoints)
 
     def finish(self, app):
         """ Close self connections. """
