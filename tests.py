@@ -25,11 +25,13 @@ def test_elasticsearch_create_get(app):
         body=body
     )
 
-    assert result['ok'] is True
+    assert 'created' in result, result.keys()
+    assert result['created'] is True, result['created']
 
-    result = yield from app.ps.elastisearch.get(
+    result = yield from app.ps.elasticsearch.get(
         index='test',
         doc_type='test',
         id=42
     )
-    assert result['_source'] == body
+    assert '_source' in result, result.keys()
+    assert result['_source'] == body, result
