@@ -18,6 +18,7 @@ Requirements
 
 - python >= 3.4
 - muffin >= 0.5.5
+- aioes >= 0.2
 
 .. _installation:
 
@@ -56,13 +57,27 @@ And use *ElasticSearch* plugin:
     class Example(muffin.Handler):
 
         @asyncio.coroutine
+        def post(self, request):
+            body = yield from request.json()
+            result = yield from app.ps.elasticsearch.create(
+                index='my-index',
+                doc_type='test',
+                id=42,
+                body=body
+            )
+            return muffin.json_response(
+                data=result, status=201
+            )
+
+
+        @asyncio.coroutine
         def get(self, request):
             ret = yield from app.ps.elasticsearch.get(
                 index='my-index',
                 doc_type='test-type',
                 id=42
             )
-            return ret
+            return muffin.json_response(data=result)
 
 
 .. _options:
