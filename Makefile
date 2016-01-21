@@ -24,5 +24,5 @@ release-minor:
 release-major:
 	bumpversion major
 
-sdist: test
+sdist:
 	@python setup.py sdist upload
