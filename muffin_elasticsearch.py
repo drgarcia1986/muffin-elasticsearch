@@ -27,8 +27,6 @@ class Plugin(BasePlugin):
     def setup(self, app):
         """ Setup self. """
         super().setup(app)
-        if not isinstance(list, self.cfg.endpoints):
-            raise TypeError('Invalid endpoints configuration format')
 
     @asyncio.coroutine
     def start(self, app):

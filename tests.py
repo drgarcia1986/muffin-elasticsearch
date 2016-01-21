@@ -15,13 +15,6 @@ def test_plugin_register(app):
     assert app.ps.elasticsearch.conn
 
 
-def test_should_raise_type_error_for_invalid_configuration(loop):
-    with pytest.raises(TypeError):
-        muffin.Application(
-            'test', loop=loop, PLUGINS=['muffin_elasticsearch']
-        )
-
-
 @pytest.mark.async
 def test_elasticsearch_create_get(app):
     body = {'str': 'foo', 'int': 1}
