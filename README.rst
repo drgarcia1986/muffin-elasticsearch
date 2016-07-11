@@ -18,7 +18,7 @@ Requirements
 
 - python >= 3.4
 - muffin >= 0.5.5
-- aioes >= 0.2
+- aioes == 0.4
 
 .. _installation:
 
