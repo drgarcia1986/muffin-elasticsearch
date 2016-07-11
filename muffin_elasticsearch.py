@@ -4,7 +4,7 @@ from aioes import Elasticsearch
 from muffin.plugins import BasePlugin
 
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __project__ = "muffin-elasticsearch"
 __author__ = "Diego Garcia <drgarcia1986@gmail.com>"
 __license__ = "MIT"
