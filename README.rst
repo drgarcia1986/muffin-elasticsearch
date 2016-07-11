@@ -1,5 +1,5 @@
 Muffin-ElasticSearch
-############
+####################
 
 .. _description:
 
@@ -14,7 +14,7 @@ Muffin-ElasticSearch -- A simple ElasticSearch plugin for muffin_ framework.
 .. _requirements:
 
 Requirements
-=============
+============
 
 - python >= 3.4
 - muffin >= 0.5.5
@@ -23,7 +23,7 @@ Requirements
 .. _installation:
 
 Installation
-=============
+============
 
 **Muffin-ElasticSearch** should be installed using pip: ::
 
@@ -85,9 +85,9 @@ And use *ElasticSearch* plugin:
 Options
 -------
 
-========================== ==============================================================
- *ELASTICSEARCH_ENDPOINTS* List of ElasticSearch servers (``['localhost:9200']``)
-========================== ==============================================================
+========================= ======================================================
+*ELASTICSEARCH_ENDPOINTS* List of ElasticSearch servers (``['localhost:9200']``)
+========================= ======================================================
 
 .. _bugtracker:
 
@@ -107,7 +107,7 @@ Development of Muffin-ElasticSearch happens at: https://github.com/drgarcia1986/
 
 
 Contributors
-=============
+============
 
 * drgarcia1986_ (Diego Garcia)
 
