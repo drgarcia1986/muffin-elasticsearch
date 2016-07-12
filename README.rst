@@ -72,7 +72,7 @@ And use *ElasticSearch* plugin:
 
         @asyncio.coroutine
         def get(self, request):
-            ret = yield from app.ps.elasticsearch.get(
+            result = yield from app.ps.elasticsearch.get(
                 index='my-index',
                 doc_type='test-type',
                 id=42
