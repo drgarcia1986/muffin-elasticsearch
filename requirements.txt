@@ -1,3 +1,3 @@
 muffin>=0.5.5
-aioes==0.4.0
+git+git://github.com/aio-libs/aioes.git@f4d263f2e1c9a96da0ec4cde89b965bacca4e3df
 -e .
