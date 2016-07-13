@@ -35,8 +35,11 @@ class Plugin(BasePlugin):
 
     def finish(self, app):
         """ Close self connections. """
-        self.conn.close()
+        if self.conn:
+            self.conn.close()
 
     def __getattr__(self, name):
         """ Proxy attribute to self connection. """
-        return getattr(self.conn, name)
+        if self.conn:
+            return getattr(self.conn, name)
+        raise TypeError('Elastic Search connection is closed')
